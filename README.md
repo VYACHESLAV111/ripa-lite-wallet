@@ -1,5 +1,4 @@
-
-# Ark Lite Wallet
+![RIPA Lite Wallet](./banner_medium_lite.jpg)
 
 ## Self Hosted on Github
 

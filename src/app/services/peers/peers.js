@@ -10,8 +10,8 @@ app.factory('$peers', ($peer, $timeout) => {
     constructor () {
       this.stack = {
         official: [
-          new $peer({ host: 'node1.arknet.cloud', port: null, ssl: true }),
-          new $peer({ host: 'node2.arknet.cloud', port: null, ssl: true }),
+          new $peer({ host: 'api.ripaex.io', port: null, ssl: true }),
+          new $peer({ host: 'api2.ripaex.io', port: null, ssl: true }),
         ],
         public: [],
         testnet: [

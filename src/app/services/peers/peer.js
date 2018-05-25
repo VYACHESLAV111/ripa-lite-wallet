@@ -11,7 +11,7 @@ const API_STATUS = '/api/loader/status'
 
 const REQUEST_TIMEOUT = 12000
 
-const TRANSACTION_HEADER_OS = 'ark-lite-wallet'
+const TRANSACTION_HEADER_OS = 'ripa-lite-wallet'
 const TRANSACTION_HEADER_PORT = '1'
 const TRANSACTION_HEADER_VERSION = require('../../../../package.json').version
 
@@ -125,6 +125,7 @@ app.factory('$peer', ($http, $log, $q, $timeout) => {
     sendTransaction (recipient, amount, smartbridge, passphrase, secondPassphrase) {
       let transaction
 
+      lisk.crypto.setNetworkVersion(0x37)
       try {
         transaction = lisk.transaction.createTransaction(
           recipient,
